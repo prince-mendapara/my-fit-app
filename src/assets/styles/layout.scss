@@ -1,0 +1,20 @@
+.app-main-wrapper {
+	display: flex;
+}
+
+.sidebar-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: $full-viewport-height;
+	width: 250px;
+	min-width: 250px;
+
+	.sidebar {
+		height: $full-viewport-height;
+	}
+}
+
+.app-main-content {
+	width: calc(100% - 250px);
+}
