@@ -62,6 +62,10 @@
 	@include margin(auto);
 }
 
+.m--10 {
+	@include margin(10px);
+}
+
 .mt--0 {
 	@include marginTop(0);
 }
@@ -78,12 +82,20 @@
 	@include marginRight(0);
 }
 
+.mr--10 {
+	@include marginRight(10px);
+}
+
 .mr--auto {
 	@include marginRight(auto);
 }
 
 .mb--0 {
 	@include marginBottom(0);
+}
+
+.mb--6 {
+	@include marginBottom(6px);
 }
 
 .mb--10 {
@@ -94,6 +106,10 @@
 	@include marginBottom(20px);
 }
 
+.mb--30 {
+	@include marginBottom(30px);
+}
+
 .mb--auto {
 	@include marginBottom(auto);
 }
@@ -102,12 +118,28 @@
 	@include marginLeft(0);
 }
 
+.ml--10 {
+	@include marginLeft(10px);
+}
+
+.ml--20 {
+	@include marginLeft(20px);
+}
+
 .ml--auto {
 	@include marginLeft(auto);
 }
 
 .p--0 {
 	@include padding(0);
+}
+
+.pl--10 {
+	@include paddingLeft(10px);
+}
+
+.p--15 {
+	@include padding(15px);
 }
 
 .bottom--0 {

@@ -1,20 +1,146 @@
 .app-main-wrapper {
 	display: flex;
+	height: 100vh;
 }
 
 .sidebar-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: $full-viewport-height;
-	width: 250px;
-	min-width: 250px;
+	height: calc(100vh - 20px);
+	width: 150px;
+	min-width: 150px;
+	background-color: $black;
+	overflow: hidden;
 
 	.sidebar {
-		height: $full-viewport-height;
+		.user-image {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+		.app-info {
+			border-bottom: 1px solid grey;
+			.app-title {
+				font-size: 2rem;
+				color: #cdcdcd;
+			}
+		}
+	}
+}
+
+.menubar-container {
+	height: calc(100vh - 20px);
+	width: 220px;
+	min-width: 220px;
+	background-color: #cccccc;
+	overflow: hidden;
+
+	.menubar {
+		.menu-list {
+			.sub-menu-list {
+				overflow-y: scroll;
+				height: calc(100vh - 120px);
+			}
+		}
+	}
+}
+
+.statistic {
+	gap: 7px;
+}
+
+.statistic-card {
+	height: 200px;
+	// width: 200px;
+	border-radius: 10px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	flex: 2 1 200px;
+	align-items: center;
+	justify-content: center;
+	background-color: #66bcb7;
+
+	.title {
+		font-size: 28px;
+		font-weight: 800;
+		margin-bottom: 20px;
+	}
+
+	.value {
+		font-size: 20px;
+		font-weight: 500;
+	}
+}
+
+.activities-wrapper {
+	.title {
+		font-size: 24px;
+		font-weight: 700;
+		@include marginBottom(10px);
+	}
+	.items {
+		gap: 7px;
+	}
+	.card {
+		height: auto;
+		flex: 1 auto 150px;
+		border-radius: 30px;
+		padding: 20px 10px 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #d1e8c1;
+
+		.icon {
+			width: 16px;
+			@include marginRight(6px);
+		}
+
+		.activity-name {
+			font-weight: 600;
+			@include marginBottom(10px);
+		}
+
+		.duration,
+		.distance {
+			font-size: 14px;
+		}
+	}
+}
+
+.activity-card {
+	height: auto;
+	width: 100%;
+	border-radius: 15px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	background-color: #e8e6c1;
+
+	.activity-name {
+		font-size: 40px;
+		font-weight: 600;
+		@include marginBottom(25px);
+	}
+	.item-wrapper {
+		gap: 10px;
+	}
+	.item {
+		font-size: 14px;
+		flex: 1 1 auto;
+		@include padding(5px);
+		border: 1px solid black;
+		border-radius: 3px;
 	}
 }
 
 .app-main-content {
-	width: calc(100% - 250px);
+	width: calc(100% - 370px);
+	overflow-y: scroll;
 }
